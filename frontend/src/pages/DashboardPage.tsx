@@ -8,6 +8,7 @@ const placeholderStats: DashboardStats = {
   outOfStock: 0,
 };
 
+/** Dashboard with inventory statistics (placeholder data for now). */
 export default function DashboardPage() {
   return (
     <section>

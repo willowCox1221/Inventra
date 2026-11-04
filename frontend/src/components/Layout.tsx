@@ -13,7 +13,7 @@ export default function Layout() {
     <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded focus:bg-white focus:px-3 focus:py-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
       >
         Skip to content
       </a>
