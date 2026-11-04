@@ -53,8 +53,10 @@ Settle these before or during the first implementation. Record each answer here 
 
 - `npm install`: install dependencies
 - `npm run dev`: dev server. `/api` is proxied to `http://localhost:5000`, a placeholder until the backend exists.
-- `npm run lint`: type-check (`tsc --noEmit`, no ESLint yet)
+- `npm run lint`: type-check (`tsc --noEmit`, no ESLint yet). This also type-checks the test files.
 - `npm run build`: type-check and production build
+- `npm test`: run the unit tests once (Vitest 2 + React Testing Library, jsdom). `npm run test:watch` runs them in watch mode.
+- Tests sit next to the code as `*.test.ts(x)`; shared setup is in `src/test/setup.ts`. Stay on Vitest 2 while the project is on Vite 5 (newer Vitest needs Vite 6+).
 
 **Backend** (`backend/Inventra.Api`, ASP.NET Core Web API on .NET 9, listens on http://localhost:5000 in Development):
 
@@ -63,6 +65,7 @@ Settle these before or during the first implementation. Record each answer here 
   Optionally `dotnet user-secrets set "MongoDb:DatabaseName" "inventra" --project backend/Inventra.Api` (defaults to `inventra`). Environment variables `MongoDb__ConnectionString` / `MongoDb__DatabaseName` also work.
 - `dotnet build backend/Inventra.Api`: build
 - `dotnet run --project backend/Inventra.Api`: run (Development profile, http://localhost:5000)
+- `dotnet test backend/Inventra.Api.Tests`: run the unit tests (xUnit + NSubstitute). They mock Mongo, so no connection string or secrets are needed.
 - `GET http://localhost:5000/api/health`: returns `mongo` as `ok`, `not_configured` or `unreachable`; the app starts fine without Mongo.
 - CORS allows `http://localhost:5173` (Vite) in Development only.
-- Layout: `Controllers/`, `Models/`, `Services/`, `Configuration/`. The data model and scan endpoints are intentionally not built yet (see open design decisions).
+- Layout: `Controllers/`, `Models/`, `Services/`, `Configuration/`. Tests live in the separate `backend/Inventra.Api.Tests/` project (no `.sln` yet). The data model and scan endpoints are intentionally not built yet (see open design decisions).

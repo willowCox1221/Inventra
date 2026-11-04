@@ -22,4 +22,7 @@ Before making changes:
 - Understand the existing coding conventions.
 - Reuse existing components when appropriate.
 - Write clean, maintainable, and well-documented code.
+- Ensure that the frontend code adheres to best practices for React, TypeScript, and Tailwind CSS.
+- Ensure that the frontend code is responsive and accessible across different devices and screen sizes.
+- Test the frontend components thoroughly to ensure they function as expected and integrate seamlessly with the backend services.
 
