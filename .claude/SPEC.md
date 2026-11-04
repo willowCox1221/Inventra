@@ -21,6 +21,7 @@ Inventra is an inventory management system designed to help businesses track inv
 - Will inventory be tracked across multiple physical locations?
 - Will users be able to customize inventory fields?
 - Will the system support multiple languages at launch?
+- Will Inventra be hosted on a server?
 
 ### Out of Scope
 - Native Android and iOS applications.
