@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "h2Zi3m9WgOF5MhrlfB7tyOf7hW8ibWwbQ+5q7Lp0z2g=",
+  "Source": "Inventra.API",
+  "BasePath": "_content/Inventra.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
